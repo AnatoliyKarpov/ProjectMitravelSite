@@ -1,0 +1,134 @@
+.featured {
+   background-image: url(../../images/featured.jpg);
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   height: 1080px;
+   position: relative;
+
+   &__container {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+   }
+
+   &__article {
+   }
+
+   &__stories {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 35.3%;
+      background-color: rgba(60, 74, 81, 0.9);
+      padding: 128px 133px;
+   }
+
+   &__title {
+      font-weight: 700;
+      font-size: 64px;
+      line-height: 80px;
+      color: #ffffff;
+      margin-bottom: 65px;
+   }
+
+   &__list {
+   }
+}
+.container {
+}
+.blog-article {
+   &__category {
+      font-weight: 800;
+      font-size: 11px;
+      text-align: center;
+      letter-spacing: 2px;
+      background-color: #e8594e;
+      @include white;
+      padding: 15px 30px;
+      border-radius: 100px;
+      display: inline-block;
+      margin-bottom: 20px;
+   }
+
+   &__title {
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 64px;
+      @include white;
+      max-width: 42%;
+      margin-bottom: 16px;
+   }
+
+   &__descr {
+      font-family: "SFC", sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 21px;
+      @include white;
+      max-width: 40%;
+      margin-bottom: 40px;
+   }
+
+   &__link {
+      @include neptune;
+      display: inline-block;
+      text-transform: uppercase;
+      margin-bottom: 105px;
+      transition: all 0.3s;
+      &:hover {
+         background-color: #4196a6;
+         transition: all 0.3s;
+      }
+   }
+}
+.btn {
+}
+.featured-list {
+   &__item {
+      &:last-child .featured-list__article {
+         border-bottom: transparent;
+      }
+   }
+   &__article {
+      border-bottom: 1px solid #4d5a5f;
+      display: flex;
+      align-items: flex-start;
+      padding: 31px 0;
+   }
+
+   &__image {
+      border-radius: 100%;
+      overflow: hidden;
+      width: 48px;
+      height: 48px;
+      flex-shrink: 0;
+      & img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+
+   &__text {
+      margin-left: 30px;
+      margin-right: 30px;
+   }
+
+   &__title {
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 700;
+      @include white;
+      margin-bottom: 5px;
+   }
+
+   &__time {
+      font-family: "SFP", sans-serif;
+      font-size: 11px;
+      line-height: 13px;
+      color: rgba(255, 255, 255, 0.502293);
+   }
+}
