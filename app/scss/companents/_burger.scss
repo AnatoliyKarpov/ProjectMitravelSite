@@ -1,0 +1,80 @@
+@media (max-width: 767px) {
+   .header.active {
+      background-color: #0ca3a8;
+      border-radius: 20%;
+      transition: all 1s ease 0s;
+   }
+   body.lock {
+      overflow: hidden;
+   }
+   .header {
+      z-index: 10;
+      &__burger {
+         display: block;
+         position: relative;
+         width: 30px;
+         height: 20px;
+         &::before {
+            content: "";
+            background-color: #fff;
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            left: 0;
+            top: 0;
+            transition: all 0.3s ease 0s;
+         }
+         &::after {
+            content: "";
+            background-color: #fff;
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            left: 0;
+            bottom: 0;
+            transition: all 0.3s ease 0s;
+         }
+      }
+   }
+   .burger {
+      &.active {
+      }
+      &__line {
+         background-color: #fff;
+         position: absolute;
+         width: 100%;
+         height: 2px;
+         left: 0;
+         top: 9px;
+      }
+   }
+
+   .btn-reset {
+   }
+   .header__burger.active:before {
+      transform: rotate(45deg);
+      top: 9px;
+   }
+   .header__burger.active:after {
+      transform: rotate(-45deg);
+      bottom: 9px;
+   }
+   .header__burger.active span {
+      transform: scale(0);
+   }
+   .menu {
+      &__nav {
+         position: fixed;
+         left: -100%;
+         top: 0;
+         width: 100%;
+         height: 100%;
+         z-index: 20;
+         @include neptune;
+         transition: all 0.3s;
+         &.active {
+            left: 0;
+         }
+      }
+   }
+}
